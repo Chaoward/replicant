@@ -1,0 +1,14 @@
+sample text 1
+sample text 2
+#portrait WA2000
+/WA2000 ice cream, ice cream
+/WA2000 When will MP5 come with the ice cream
+#portrait MP5,100
+* rustle rustle *
+/MP5 hah hah
+/MP5 Sorry, ran into some trouble
+/MP5 Here is the ice cream
+#portrait Dier
+BAM!!!
+/Dier it is me...
+/Dier DIIIEEEERRRRROOO!!!

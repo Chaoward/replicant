@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Cutscene/TextFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Cutscene/biggerTextbox.png" type="Texture" id=2]
-[ext_resource path="res://Cutscene/CutsceneHistory.gd" type="Script" id=3]
+[ext_resource path="res://Cutscene/scripts/CutsceneHistory.gd" type="Script" id=3]
 
 [node name="CutsceneHistory" type="Control"]
 anchor_right = 1.0
@@ -36,9 +36,6 @@ margin_top = -291.0
 margin_right = 419.5
 margin_bottom = 291.0
 scroll_horizontal_enabled = false
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
 margin_right = 978.0

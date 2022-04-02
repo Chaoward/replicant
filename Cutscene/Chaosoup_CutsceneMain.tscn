@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Cutscene/textbox.png" type="Texture" id=1]
 [ext_resource path="res://Cutscene/TextFont.tres" type="DynamicFont" id=2]
@@ -6,40 +6,52 @@
 [ext_resource path="res://Cutscene/CutsceneHistory.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Ext/skipbtn.png" type="Texture" id=5]
 [ext_resource path="res://Ext/skipbtn_click.png" type="Texture" id=6]
+[ext_resource path="res://Cutscene/background/1.png" type="Texture" id=7]
+[ext_resource path="res://Cutscene/portraits/WA2000.png" type="Texture" id=8]
+[ext_resource path="res://Cutscene/scripts/Chaosoup_portraitHandler.gd" type="Script" id=9]
+[ext_resource path="res://Cutscene/scripts/Chaosoup_CutsceneMain.gd" type="Script" id=10]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
 [node name="CutscenePlayer" type="CanvasLayer"]
 pause_mode = 2
+script = ExtResource( 10 )
+language = "jp"
 
 [node name="dim" type="ColorRect" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0.701961 )
 
 [node name="bgFadeLayer" type="ColorRect" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 color = Color( 0, 0, 0, 1 )
 
-[node name="Backgrounds" type="Control" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color( 0, 0.403922, 0.490196, 1 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 7 )
+expand = true
+
+[node name="SampleSprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 306, 604 )
+texture = ExtResource( 8 )
 
 [node name="Portraits" type="Control" parent="."]
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -840.0
-margin_bottom = -240.0
+margin_top = -730.0
+margin_bottom = -130.0
 grow_vertical = 0
+rect_pivot_offset = Vector2( 960, 300 )
 mouse_filter = 2
+script = ExtResource( 9 )
 
 [node name="Music" type="Node" parent="."]
 
@@ -58,9 +70,6 @@ margin_right = -16.0
 margin_bottom = -53.0
 rect_min_size = Vector2( 876, 207 )
 mouse_filter = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect" type="TextureRect" parent="CenterContainer"]
 visible = false
@@ -69,17 +78,14 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -661.0
-margin_top = -103.5
+margin_top = 16.5
 margin_right = 215.0
-margin_bottom = 103.5
+margin_bottom = 223.5
 grow_vertical = 2
 rect_scale = Vector2( 1.5, 1.5 )
 rect_pivot_offset = Vector2( 0, 103 )
 texture = ExtResource( 1 )
 stretch_mode = 4
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="textBackground" type="ColorRect" parent="CenterContainer"]
 anchor_top = 0.5
@@ -110,9 +116,6 @@ rect_pivot_offset = Vector2( 0, 90 )
 custom_fonts/font = ExtResource( 3 )
 text = "Dandelion"
 autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="textActor_better" type="RichTextLabel" parent="CenterContainer"]
 anchor_left = 0.5
@@ -204,5 +207,21 @@ input_pass_on_modal_close_click = false
 custom_fonts/font = ExtResource( 3 )
 custom_styles/normal = SubResource( 1 )
 text = "TN"
+
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+margin_left = 645.0
+margin_top = 309.0
+margin_right = 1145.0
+margin_bottom = 809.0
+
+[node name="Control" type="Control" parent="CenterContainer2"]
+margin_left = 250.0
+margin_top = 250.0
+margin_right = 250.0
+margin_bottom = 250.0
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
 
 [connection signal="gui_input" from="dim" to="." method="_on_dim_gui_input"]

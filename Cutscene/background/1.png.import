@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/VN MaskOverlay (stretch).png-923038bbcd42b85bfe72946b3f8beba8.stex"
+path="res://.import/1.png-26c2c5fcfbd0d4417931f2413b6d4159.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cutscene/VN MaskOverlay (stretch).png"
-dest_files=[ "res://.import/VN MaskOverlay (stretch).png-923038bbcd42b85bfe72946b3f8beba8.stex" ]
+source_file="res://Cutscene/background/1.png"
+dest_files=[ "res://.import/1.png-26c2c5fcfbd0d4417931f2413b6d4159.stex" ]
 
 [params]
 

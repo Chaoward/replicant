@@ -155,9 +155,6 @@ func end_cutscene_2():
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = SubResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -171,5 +168,3 @@ __meta__ = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 script = ExtResource( 2 )
-
-[connection signal="cutscene_finished" from="CutscenePlayer" to="." method="_on_CutscenePlayer_cutscene_finished"]
