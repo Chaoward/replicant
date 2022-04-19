@@ -1,24 +1,21 @@
+#cache_portraits WA2000 MP5,100 Dier
 #bg SFs
-SF Gang!
-Looking good Mr. Crabs
-
+Once, there were Sangvis Feries
+Then there were none
 #bg 1 night
-#portrait WA2000
 /WA2000 ice cream, ice cream
 /WA2000 When will MP5 come with the ice cream
-* rustle rustle *
 
-#portrait MP5,100
+* rustle rustle *
 /MP5 hah hah
 /MP5 Sorry, ran into some trouble
 /WA2000 shhh!
 /WA2000 Not so loud. There are SF everywhere
 /MP5 sorry
 /MP5 Here is the ice cream
-
 #hide_portraits
 BAM!!!
-#portrait Dier
+
 /Dier it is me...
 /Dier DIIIEEEERRRRROOO!!!
 /WA2000 WAAAAAAAHHHHH!!!
